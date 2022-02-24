@@ -107,15 +107,15 @@ class Ui(QtWidgets.QMainWindow):
         elif operator % 2 and type(text) == int:
             value_1.append(text)
 
-            self.display.setText("".join(str(x) for x in value_1))
             #trnasform the display value in an int
             formatted_value = int("".join(str(x) for x in value_1))
+            self.display.setText(str(formatted_value))
 
         elif type(text) == int:
             value_2.append(text)
             # formatted_value_2 = int(value_2.join(int(x) for x in value_2))
             formatted_value_2 = int("".join(str(x) for x in value_2))
-            self.display.setText("".join(str(x) for x in value_2))
+            self.display.setText(str(formatted_value_2))
 
 
 app = QtWidgets.QApplication(sys.argv)
